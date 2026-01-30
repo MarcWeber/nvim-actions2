@@ -71,3 +71,7 @@ efm_cmd_run('rust', {'cargo', 'build', '--release'})
 KISS ?
 
 lua require('nvim-actions2').run_list({'echo "a"', 'echo "b"'})
+
+related work
+============
+https://github.com/MarcWeber/vim-addon-errorformats
