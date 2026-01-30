@@ -23,6 +23,11 @@ TODO: demos:
 should expose all module functions so that run_list(..) is explicit and
 defining graphs can be done. Should be trivial.
 
+What is A B C?
+Either a 
+* function() do stuff end
+* 'viml command'
+
 Example
 =========
 See lua/nvim-actions2-demos.lua
@@ -30,17 +35,17 @@ See lua/nvim-actions2-demos.lua
 
 in your local vimrc
 
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'./gradlew'}, {efm: vim.fn['vim_addon_errorformats#ForList']("clang"))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'./gradlew', 'installDebug'}, {efm: vim.fn['vim_addon_errorformats#ForList']('gradle clang java kotlin'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'ndk', '-t', 'arm64-v8a', '-o', 'app/src/main/jniLibs/', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'ndk', '-t', 'arm64-v8a', '-o', 'app/src/main/jniLibs/', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'apk', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'apk', 'run'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'run'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'run'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
-noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'build', '--release'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'./gradlew'}, {efm: vim.fn['vim_addon_errorformats#ForList']("clang"))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'./gradlew', 'installDebug'}, {efm: vim.fn['vim_addon_errorformats#ForList']('gradle clang java kotlin'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'ndk', '-t', 'arm64-v8a', '-o', 'app/src/main/jniLibs/', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'ndk', '-t', 'arm64-v8a', '-o', 'app/src/main/jniLibs/', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'apk', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'apk', 'run'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'run'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'run'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'build'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust-errors-only'))<CR>
+    noremap <silent> <F4> <Cmd>lua require('nvim-actions2').run_to_list({'cargo', 'build', '--release'}, {efm: vim.fn['vim_addon_errorformats#ForList']('rust'))<CR>
 
 
 local map_efm_cmd_run = require('nvim-actions2').map_efm_cmd_run
